@@ -1,0 +1,13 @@
+body {
+  padding: 10px;
+  font-family: Verdana, sans-serif;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #48D1CC 100%);
+  background-attachment: fixed;
+}
+
+
+
+.login-buttons-dropdown-align-right {
+    float: right;
+}
