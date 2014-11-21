@@ -9,4 +9,6 @@ insecure
 accounts-ui
 accounts-password
 mdg:geolocation
+aldeed:geocoder
+bootstrap
 

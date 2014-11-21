@@ -1,13 +1,22 @@
+
 body {
   padding: 10px;
   font-family: Verdana, sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #48D1CC 100%);
-  background-attachment: fixed;
 }
-
-
 
 .login-buttons-dropdown-align-right {
     float: right;
+}
+
+@media (max-width: 500px) {
+  .details, .message {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 12px 15px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
 }

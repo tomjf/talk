@@ -3,15 +3,17 @@
 </head>
 
 <body>
-  {{> loginButtons align="right"}}<br>
-  <h1>Chatapp</h1>
-  {{> welcome }}
-  {{> input}}
-  {{> messages}}
-  <img src="http://maps.googleapis.com/maps/api/staticmap?center={{loc.lat}},{{loc.lng}}&zoom=15&size=600x300&maptype=roadmap&markers=color:blue%7C{{loc.lat}},{{loc.lng}}" />
-  {{#if error}}
-    <p>Error: {{error.message}}</p>
-  {{/if}}
+  <div class="container">
+    {{> loginButtons align="right"}}<br>
+    <h1>Chatapp</h1>
+    {{> welcome }}
+    {{> input}}
+    {{> messages}}
+    <img src="http://maps.googleapis.com/maps/api/staticmap?center={{loc.lat}},{{loc.lng}}&zoom=15&size=600x300&maptype=roadmap&markers=color:blue%7C{{loc.lat}},{{loc.lng}}" />
+    {{#if error}}
+      <p>Error: {{error.message}}</p>
+    {{/if}}
+  </div>
 </body>
 
 <template name="welcome">
@@ -22,7 +24,8 @@
 
 <template name="messages">
   {{#each messages}}
-    <strong>{{name}}:</strong> {{message}}<br>
+    <strong>{{name}}:</strong> {{message}}<br>{{location.lat}}{{location.lng}}
+
   {{/each}}
 </template>
 
