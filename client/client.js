@@ -17,6 +17,11 @@ Template.messages.helpers({
     }
 })
 
+UI.registerHelper('formatTime', function(context, options) {
+  if(context)
+    return moment(context).fromNow();
+});
+
 Template.input.events = {
   'keydown input#message' : function (event) {
     if (event.which == 13) { // 13 is the enter key event
@@ -25,6 +30,7 @@ Template.input.events = {
       else
         var name = 'Anonymous';
       var message = document.getElementById('message');
+      var date = Date.now()
 
 
       // // Reverse
@@ -36,7 +42,7 @@ Template.input.events = {
         Messages.insert({
           name: name,
           message: message.value,
-          time: Date.now(),
+          createdAt: Date.now(),
           // location: Geolocation.latLng() || { lat: 0, lng: 0 },
         });
 

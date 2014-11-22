@@ -22,7 +22,7 @@
     {{/if}}
   </div>
 
-  <nav class="bar bar-tab">
+  <!-- <nav class="bar bar-tab">
     <a class="tab-item active" href="#">
       <span class="icon icon-home"></span>
       <span class="tab-label">Home</span>
@@ -43,7 +43,7 @@
       <span class="icon icon-compose"></span>
       <span class="tab-label">New</span>
     </a>
-  </nav>
+  </nav> -->
 
 </body>
 
@@ -55,7 +55,12 @@
 
 <template name="messages">
   {{#each messages}}
-    <strong>{{name}}:</strong> {{message}}<br>
+    <div class="card">
+      <strong>{{name}}:</strong> {{message}}<br>
+      <small>
+        {{formatTime createdAt}}
+      </small>
+    </div>
   {{/each}}
 </template>
 
